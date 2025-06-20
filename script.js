@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
 
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('active');
   });
 
-  // Event filtering
   const sportFilter = document.querySelector('#sport-filter');
   const dateFilter = document.querySelector('#date-filter');
   const eventCards = document.querySelectorAll('.event-card');
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dateFilter.addEventListener('change', filterEvents);
   }
 
-  // Contact form validation
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Book button placeholder
   const bookButtons = document.querySelectorAll('.book-btn');
   bookButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -49,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modal handling
   const modalButtons = document.querySelectorAll('[data-modal-target]');
   const closeButtons = document.querySelectorAll('.close-btn');
 
@@ -69,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close modal when clicking outside
   document.querySelectorAll('.modal').forEach(modal => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
@@ -78,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Sign Up form handling
   const signupForm = document.querySelector('#signup-form');
   if (signupForm) {
     signupForm.addEventListener('submit', (e) => {
@@ -95,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sign In form handling
   const signinForm = document.querySelector('#signin-form');
   if (signinForm) {
     signinForm.addEventListener('submit', (e) => {
