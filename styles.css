@@ -10,7 +10,14 @@ body {
   color: #333;
 }
 
-/* Navigation */
+body.home-page {
+  background-image: url('https://images.unsplash.com/photo-1517649763966-14087cd4b8e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 header {
   background: #1a1a1a;
   color: #fff;
@@ -72,7 +79,6 @@ nav {
   cursor: pointer;
 }
 
-/* Hero Section */
 .hero {
   height: 100vh;
   background: linear-gradient(to right, #ff6f61, #de4d4d);
@@ -113,7 +119,6 @@ nav {
   background: #f0f0f0;
 }
 
-/* General Section */
 .section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -138,7 +143,6 @@ nav {
   color: #4dff4d;
 }
 
-/* Events Section */
 .filter-options {
   display: flex;
   gap: 1rem;
@@ -250,7 +254,6 @@ nav {
   background: #e65a50;
 }
 
-/* Steps and Organizer Sections */
 .steps-grid,
 .organizer-grid {
   display: grid;
@@ -293,7 +296,6 @@ nav {
   border-left: 5px solid #4dff4d;
 }
 
-/* Contact Section */
 #contact form {
   display: flex;
   flex-direction: column;
@@ -315,7 +317,74 @@ nav {
   min-height: 100px;
 }
 
-/* Footer */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #ff6f61;
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.modal .btn {
+  width: 100%;
+  text-align: center;
+}
+
 footer {
   background: #1a1a1a;
   color: #fff;
@@ -323,7 +392,6 @@ footer {
   padding: 1rem 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;

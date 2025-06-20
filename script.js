@@ -48,4 +48,67 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Booking feature is not implemented in this prototype.');
     });
   });
+
+  // Modal handling
+  const modalButtons = document.querySelectorAll('[data-modal-target]');
+  const closeButtons = document.querySelectorAll('.close-btn');
+
+  modalButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = button.getAttribute('data-modal-target');
+      const modal = document.getElementById(modalId);
+      modal.classList.add('active');
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal');
+      modal.classList.remove('active');
+    });
+  });
+
+  // Close modal when clicking outside
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  });
+
+  // Sign Up form handling
+  const signupForm = document.querySelector('#signup-form');
+  if (signupForm) {
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.querySelector('#signup-email').value;
+      const password = document.querySelector('#signup-password').value;
+      if (email && password) {
+        alert(`Sign Up successful for ${email}! (This is a prototype; no actual account created.)`);
+        signupForm.closest('.modal').classList.remove('active');
+        signupForm.reset();
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  }
+
+  // Sign In form handling
+  const signinForm = document.querySelector('#signin-form');
+  if (signinForm) {
+    signinForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.querySelector('#signin-email').value;
+      const password = document.querySelector('#signin-password').value;
+      if (email && password) {
+        alert(`Sign In successful for ${email}! (This is a prototype; no actual login occurs.)`);
+        signinForm.closest('.modal').classList.remove('active');
+        signinForm.reset();
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  }
 });

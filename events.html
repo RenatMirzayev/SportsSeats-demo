@@ -18,8 +18,8 @@
         <li><a href="organizers.html">Organizers</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="login-btn"><a href="#">Sign Up</a></li>
-        <li class="login-btn"><a href="#">Sign In</a></li>
+        <li class="login-btn"><a href="#" data-modal-target="signup-modal">Sign Up</a></li>
+        <li class="login-btn"><a href="#" data-modal-target="signin-modal">Sign In</a></li>
       </ul>
       <div class="mobile-menu-btn">
         <i class="fas fa-bars"></i>
@@ -28,109 +28,108 @@
   </header>
 
   <section id="events" class="section">
-    <h2>What's Coming Up?</h2>
+    <h2>Upcoming Events</h2>
+    <p class="info2">Find and book your favorite sports events.</p>
     <div class="filter-options">
-      <label for="sport-filter">Filter by Sport:</label>
-      <select id="sport-filter">
-        <option value="all">All</option>
-        <option value="basketball">Basketball</option>
-        <option value="football">Football</option>
-        <option value="tennis">Tennis</option>
-        <option value="volleyball">Volleyball</option>
-        <option value="soccer">Soccer</option>
-      </select>
-      
-      <label for="date-filter">Date:</label>
-      <select id="date-filter">
-        <option value="all">Anytime</option>
-        <option value="this-week">This Week</option>
-        <option value="this-month">This Month</option>
-        <option value="next-month">Next Month</option>
-      </select>
+      <div>
+        <label for="sport-filter">Sport</label>
+        <select id="sport-filter">
+          <option value="all">All Sports</option>
+          <option value="basketball">Basketball</option>
+          <option value="soccer">Soccer</option>
+          <option value="tennis">Tennis</option>
+        </select>
+      </div>
+      <div>
+        <label for="date-filter">Date</label>
+        <select id="date-filter">
+          <option value="all">All Dates</option>
+          <option value="this-week">This Week</option>
+          <option value="this-month">This Month</option>
+        </select>
+      </div>
     </div>
-
     <div class="event-grid">
-      <div class="event-card" data-sport="basketball" data-date="this-month">
-        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1790&q=80');">
+      <div class="event-card" data-sport="basketball" data-date="this-week">
+        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1515524738708-327f6b0037a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80')">
           <span class="event-tag info1">Basketball</span>
         </div>
         <div class="event-details">
-          <h3>City League Finals</h3>
-          <p><i class="fas fa-calendar-alt"></i> June 15, 2025 – 7:00 PM</p>
-          <p><i class="fas fa-map-marker-alt"></i> Downtown Sports Arena</p>
+          <h3>City Hoops Championship</h3>
+          <p>June 25, 2025 | Arena Stadium</p>
           <div class="availability">
-            <span class="seats-available">Only 42 seats left</span>
-            <span class="price">$25–$75</span>
+            <span class="seats-available">100 seats left</span>
+            <span class="price">$50</span>
           </div>
-          <button class="btn book-btn">Book Seat</button>
+          <button class="btn book-btn">Book Now</button>
         </div>
       </div>
-
-      <div class="event-card" data-sport="football" data-date="this-month">
-        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1790&q=80');">
-          <span class="event-tag info2">Football</span>
-        </div>
-        <div class="event-details">
-          <h3>Midseason Showdown</h3>
-          <p><i class="fas fa-calendar-alt"></i> June 22, 2025 – 3:00 PM</p>
-          <p><i class="fas fa-map-marker-alt"></i> City Stadium</p>
-          <div class="availability">
-            <span class="seats-available">112 spots open</span>
-            <span class="price">$30–$90</span>
-          </div>
-          <button class="btn book-btn">Book Seat</button>
-        </div>
-      </div>
-
-      <div class="event-card" data-sport="tennis" data-date="next-month">
-        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1740&q=80');">
-          <span class="event-tag else">Tennis</span>
-        </div>
-        <div class="event-details">
-          <h3>Summer Open 2025</h3>
-          <p><i class="fas fa-calendar-alt"></i> July 5–7, 2025 – All Day</p>
-          <p><i class="fas fa-map-marker-alt"></i> Tennis World Center</p>
-          <div class="availability">
-            <span class="seats-available">Very limited seats</span>
-            <span class="price">$40–$120</span>
-          </div>
-          <button class="btn book-btn">Book Seat</button>
-        </div>
-      </div>
-
-      <div class="event-card" data-sport="volleyball" data-date="this-week">
-        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1612872087720-bb876e2e03a3?auto=format&fit=crop&w=1740&q=80');">
-          <span class="event-tag info1">Volleyball</span>
-        </div>
-        <div class="event-details">
-          <h3>Beach Volleyball Championship</h3>
-          <p><i class="fas fa-calendar-alt"></i> June 20, 2025 – 2:00 PM</p>
-          <p><i class="fas fa-map-marker-alt"></i> Coastal Arena</p>
-          <div class="availability">
-            <span class="seats-available">85 spots open</span>
-            <span class="price">$20–$60</span>
-          </div>
-          <button class="btn book-btn">Book Seat</button>
-        </div>
-      </div>
-
-      <div class="event-card" data-sport="soccer" data-date="next-month">
-        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3b8e43761?auto=format&fit=crop&w=1740&q=80');">
+      <div class="event-card" data-sport="soccer" data-date="this-month">
+        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3b8e67938?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80')">
           <span class="event-tag info2">Soccer</span>
         </div>
         <div class="event-details">
-          <h3>Regional Soccer Cup</h3>
-          <p><i class="fas fa-calendar-alt"></i> July 12, 2025 – 5:00 PM</p>
-          <p><i class="fas fa-map-marker-alt"></i> Metro Stadium</p>
+          <h3>Regional Soccer League</h3>
+          <p>July 5, 2025 | Metro Field</p>
           <div class="availability">
-            <span class="seats-available">200 spots open</span>
-            <span class="price">$35–$100</span>
+            <span class="seats-available">200 seats left</span>
+            <span class="price">$30</span>
           </div>
-          <button class="btn book-btn">Book Seat</button>
+          <button class="btn book-btn">Book Now</button>
+        </div>
+      </div>
+      <div class="event-card" data-sport="tennis" data-date="this-month">
+        <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1618886614636-0fe29ab9c128?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80')">
+          <span class="event-tag else">Tennis</span>
+        </div>
+        <div class="event-details">
+          <h3>Summer Tennis Open</h3>
+          <p>July 10, 2025 | Central Courts</p>
+          <div class="availability">
+            <span class="seats-available">50 seats left</span>
+            <span class="price">$75</span>
+          </div>
+          <button class="btn book-btn">Book Now</button>
         </div>
       </div>
     </div>
   </section>
+
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">×</span>
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" required />
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="signin-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">×</span>
+      <h2>Sign In</h2>
+      <form id="signin-form">
+        <div class="form-group">
+          <label for="signin-email">Email</label>
+          <input type="email" id="signin-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signin-password">Password</label>
+          <input type="password" id="signin-password" name="password" required />
+        </div>
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 SportsSeat. All rights reserved.</p>
